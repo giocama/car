@@ -39,8 +39,7 @@ const fetchData = async () => {
 const paintCards = (data) => {
   data.forEach((product) => {
     templateCard.querySelector("h5").textContent = product.title;
-    const { precio } = product
-    templateCard.querySelector("p").textContent = `Precio: $${precio}`;
+    templateCard.querySelector("p").textContent = product.precio;
     templateCard.querySelector("img").setAttribute("src", product.thumbnailUrl);
     templateCard.querySelector(".btn-dark").dataset.id = product.id;
 
